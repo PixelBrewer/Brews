@@ -1,8 +1,11 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import {express} from 'node:express';
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+export default main (req, res) =>{
+    const app = express();
+    app.get('/', (req, res) => {
+        res.send('Hello World');
+    });
+    app.listen(3000, () => {
+        console.log('Server is running on http://localhost:3000');
+    });
 }
