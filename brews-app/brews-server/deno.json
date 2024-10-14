@@ -4,7 +4,6 @@
   },
   "imports": {
     "@std/assert": "jsr:@std/assert@1",
-    "express": "npm:express@^4.21.1",
-    "nodemon": "npm:nodemon@^3.1.7"
+    "express": "npm:express@^4.21.1"
   }
 }
