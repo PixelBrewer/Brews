@@ -1,19 +1,23 @@
 import Link from "next/link";
+import Image from "next/image";
 import DarkModeToggle from "./dark-mode-toggle";
 
 const Navbar = () => {
   return (
-    <nav className='w-full bg-background dark:bg-background shadow-md'>
+    <nav className='w-full bg-background dark:bg-background shadow-md p-4'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between h-16'>
-          <div className='flex-shrink-0'>
-            <DarkModeToggle />
+        <div className='flex justify-between items-center h-16'>
+          {" "}
+          {/* Ensure items-center is here */}
+          <div className='flex items-center p-2'>
             <Link href='/'>
-              {/* <img
-                className='h-10'
-                src='/logo.png'
-                alt='Coffee Brew'
-              /> */}
+              <Image
+                className='h-16'
+                src='/BrewsSmall.jpg'
+                alt='Brews Logo'
+                width={85}
+                height={60}
+              />
             </Link>
           </div>
           <div className='flex space-x-4 items-center'>
@@ -34,6 +38,9 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
+      </div>
+      <div>
+        <DarkModeToggle />
       </div>
     </nav>
   );
